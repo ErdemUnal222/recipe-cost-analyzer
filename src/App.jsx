@@ -12,7 +12,7 @@ function App() {
     setResult(null)
 
     try {
-      const response = await fetch('http://localhost:3001/analyze', {
+     const response = await fetch('https://recipe-cost-analyzer-production.up.railway.app/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ recipe })
