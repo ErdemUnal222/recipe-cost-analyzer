@@ -1,9 +1,3 @@
-you didnt give me the characters
-
-22:51
-You're right. Here it is with all the markdown:
-
-markdown
 # Recipe Cost Analyzer
 
 A full-stack AI-powered application that analyzes recipe ingredients and estimates food costs, suggested selling price, and profit margin — built by a former Michelin-starred chef turned developer.
