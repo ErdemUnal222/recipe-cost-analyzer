@@ -1,16 +1,30 @@
-# React + Vite
+Recipe Cost Analyzer
+A full-stack AI-powered application that analyzes recipe ingredients and estimates food costs, suggested selling price, and profit margin — built by a former Michelin-starred chef turned developer.
+Live Demo
+projectcostanalyzer.netlify.app
+How it works
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Paste a recipe (ingredients, quantities, instructions)
+The app sends it to an Express backend
+The backend calls the Claude API (Anthropic) to extract ingredients, estimate costs per ingredient, calculate total food cost, suggested price, and margin
+Results are displayed instantly
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Tech Stack
+Frontend: React, Vite, deployed on Netlify
+Backend: Node.js, Express, deployed on Railway
+AI: Anthropic Claude API
+Run locally
+Clone the repository:
+git clone https://github.com/ErdemUnal222/recipe-cost-analyzer.git
+Install frontend dependencies:
+npm install
+npm run dev
+Install backend dependencies:
+cd server
+npm install
+Create a .env file in the server folder:
+ANTHROPIC_API_KEY=your_key_here
+Start the server:
+node index.js
+Notes
+Ingredient prices are estimated by the AI based on average French market rates. Live supplier price integration is planned for v2.
